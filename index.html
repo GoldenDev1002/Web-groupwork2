@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="app">
+        <ul >
+            <li v-for="lesson in lessons">{{ lesson.topic }}</li>
+            <li v-for="lesson in lessons">{{ lesson.location }}</li>
+            <li v-for="lesson in lessons">{{ lesson.price }}</li>
+        </ul>
+           </div>
 </body>
 </html>
