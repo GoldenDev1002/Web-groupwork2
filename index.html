@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+        <link rel="stylesheet" href="css/style2.css">
+        <title>Book Lesson</title>
+    </head>
 <body>
-    <div id="app">
-        <ul >
-            <li v-for="lesson in lessons">{{ lesson.topic }}</li>
-            <li v-for="lesson in lessons">{{ lesson.location }}</li>
-            <li v-for="lesson in lessons">{{ lesson.price }}</li>
-        </ul>
-           </div>
-</body>
-<script>
-    let app = new Vue({
-        el: "#app",
-        data: {
-            lessons: []
-        },
-        created: function(){
-            fetch("http://localhost:3000/lessons").then((response)=> {
-                response.json().then((lessons)=> {
-                    console.log(lessons);
-                    this.lessons = lessons
-                })
-            })
-        }
+   <div id="app">
+<ul class="apps" v-for="lesson in lessons">
+    <li> Topic : {{ lesson.topic }}</li>
+    <li> Location : {{ lesson.location }}</li>
+    <li> Price : {{ lesson.price }}</li>
+</ul>
+   </div>
 
-    })
-</script>
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                lessons: [],
+                
+            },
+            created: function(){
+                fetch("http://localhost:3000/lessons").then((response)=> {
+                    response.json().then((lessons)=> {
+                        console.log(lessons);
+                        this.lessons = lessons
+                    })
+                })
+            }
+
+        })
+    </script>
+</body>
 </html>
