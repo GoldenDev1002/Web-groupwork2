@@ -53,3 +53,7 @@ app.get("/user", (req, res)=> {
     ]
     res.json(userDetails)
 })
+
+app.listen("3000", ()=> {
+    console.log("this is to the port 3500");
+})
