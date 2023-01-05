@@ -9,14 +9,14 @@ app.get("/lessons", (req, res)=> {
     app.set("json spaces", 3);
     let lessons= [
         {
-        topic: "math",
+        topic: "Math",
             location: "Brent Cross", 
             price: 100
            
         },
     
         {
-            topic: "math",
+            topic: "Math",
                location: "Brent Cross", 
                price: 100
               
@@ -24,7 +24,7 @@ app.get("/lessons", (req, res)=> {
     
            
         {
-            topic: "math",
+            topic: "Math",
                location: "Brent Cross", 
                price: 100
               
@@ -32,7 +32,7 @@ app.get("/lessons", (req, res)=> {
 
            
         {
-            topic: "math",
+            topic: "Math",
                location: "Brent Cross", 
                price: 100
               
@@ -46,14 +46,14 @@ app.get("/user", (req, res)=> {
     app.set("json spaces", 3);
     let userDetails = [
         {
-            email: "firstuser1@gmail.com",
-            password : "password134"
+            email: "user@email.com",
+            password : "mypassword"
               
            },
     ]
     res.json(userDetails)
 })
 
-app.listen("3000", ()=> {
-    console.log("this is to the port 3500");
+app.listen("2100", ()=> {
+    console.log("this is to the port 2100");
 })
